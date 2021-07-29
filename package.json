@@ -1,5 +1,5 @@
 {
-  "name": "EmployeeManager",
+  "name": "assets",
   "version": "1.0.0",
   "description": "Uses a MySQL database to create a dynamic employee management interface.",
   "main": "index.js",

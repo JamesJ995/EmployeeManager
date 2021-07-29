@@ -18,5 +18,12 @@ const db = mysql.createConnection(
     password: "Kl23j4h9fk`",
     database: "employee_management_db",
   },
-  console.log(`Connected to the emplopyee_management_db database.`)
+  console.log(`Connected to the employee_management_db database.`)
 );
+
+//db.query("SELECT * from employee", function (err, results) {}); //mock up query
+
+//eventhandler to start the server.
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
+});
