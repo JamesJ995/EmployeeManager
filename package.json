@@ -1,0 +1,24 @@
+{
+  "name": "EmployeeManager",
+  "version": "1.0.0",
+  "description": "Uses a MySQL database to create a dynamic employee management interface.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JamesJ995/EmployeeManager.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JamesJ995/EmployeeManager/issues"
+  },
+  "homepage": "https://github.com/JamesJ995/EmployeeManager#readme",
+  "dependencies": {
+    "inquirer": "^8.1.2",
+    "mysql2": "^2.2.5"
+  }
+}
