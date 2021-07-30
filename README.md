@@ -16,7 +16,7 @@ npm install
 
 ## Usage
 To run the app use: ' npm start ' from the root folder
-![teamprofile](https://user-images.githubusercontent.com/20030490/125895109-38847db3-faa1-4011-a087-88f48f44c0af.gif)
+![employeeManager](https://user-images.githubusercontent.com/20030490/127621610-aa72e991-8c8e-4d89-9f9b-11dc226f2271.gif)
 
 
 ## License
