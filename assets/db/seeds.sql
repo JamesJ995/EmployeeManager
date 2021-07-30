@@ -4,12 +4,12 @@ VALUES ("Sales"),
        ("Finance"),
        ("Legal");
 
-INSERT INTO roles (title, salary)
-VALUES ("Software Engineer", 100000),
-       ("Accountant", 80000),
-       ("Lawyer", 200000),
-       ("Salesperson", 150000),
-       ("Sales Lead", 300000);
+INSERT INTO roles (title, salary, department_id)
+VALUES ("Software Engineer", 100000, 2),
+       ("Accountant", 80000, 3),
+       ("Lawyer", 200000, 4),
+       ("Salesperson", 150000, 1),
+       ("Sales Lead", 300000, 1);
 
 INSERT INTO employees (first_name, last_name, role_id)
 VALUES ("Alexa", "Mathis", 1),
