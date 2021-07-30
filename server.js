@@ -106,9 +106,8 @@ function addDepartment() {
     .then(async function ({ name }) {
       roleArray.push(name);
       db.query(`INSERT INTO departments (name) VALUES ("${name}")`,
-      function(err, results, fields) {
-        console.log(results); // results contains rows returned by server
-        console.log(fields); // fields contains extra meta data about results, if available
+      function(err, results) {
+        return; // results contains rows returned by server
       }
       );
       await cleanUp();
@@ -137,9 +136,10 @@ function addRole() {
       },
     ])
     .then(async function ({ title, salary, department_id }) {
+      titleArray.push(title);
       for (let i = 0; i <= roleArray.length; i++) {
         if (department_id == roleArray[i]) {
-          department_id = roleArray.indexOf(roleArray[i+1]);
+          department_id = roleArray.indexOf(roleArray[i]) + 1;
         }
       }
       db.query(
@@ -173,7 +173,7 @@ function addEmployee() {
     .then(async function ({ first_name, last_name, role_id }) {
       for (let i = 0; i <= titleArray.length; i++) {
         if (role_id == titleArray[i]) {
-          role_id = titleArray.indexOf(titleArray[i+1]);
+          role_id = titleArray.indexOf(titleArray[i]) + 1;
         }
       }
       db.query(
@@ -202,7 +202,10 @@ function updateEmployee() {
     .then(async function ({ last_name, role_id }) {
       for (let i = 0; i <= titleArray.length; i++) {
         if (role_id == titleArray[i]) {
-          role_id = titleArray.indexOf(titleArray[i+1]);
+          role_id = titleArray.indexOf(titleArray[i]) + 1;
+          if (role_id > titleArray.length){
+            role_id = role_id - 1;
+          }
         }
       }
       db.query(
